@@ -73,3 +73,78 @@
 // }
 
 // lifeInWeeks(21);
+
+// var userName = prompt("Enter your name:");
+// var userPartnerName = prompt("Enter your partner's name:");
+
+// var loveScore = Math.floor(Math.random() * 100) + 1;
+
+// alert(
+//   "The love score between " +
+//     userName +
+//     " and " +
+//     userPartnerName +
+//     " is " +
+//     loveScore +
+//     "%."
+// );
+
+// var userName = prompt("What's your name?");
+
+// var userList = ["Ife", "Sharon", "Ola", "Sunmi", "Ayo", "Ade"];
+
+// if (userList.includes(userName)) {
+//   alert("Welcome " + userName);
+// } else {
+//   alert("User not found.");
+// }
+
+// var output = [];
+// var count = 1;
+
+// function fizzBuzz() {
+//   if (count % 3 === 0 && count % 5 === 0) {
+//     output.push("FizzBuzz");
+//   } else if (count % 3 === 0) {
+//     output.push("Fizz");
+//   } else if (count % 5 === 0) {
+//     output.push("Buzz");
+//   } else {
+//     output.push(count);
+//   }
+
+//   count++;
+
+//   console.log(output);
+// }
+
+// var count = 99;
+
+// function bottlesOfBeer() {
+//   while (count > -1) {
+//     if (count > 1) {
+//       console.log(
+//         count +
+//           " bottles of beer on the wall, " +
+//           count +
+//           " bottles of beer. Take one down and pass it around, " +
+//           (count - 1)
+//       );
+//     } else if (count === 1) {
+//       console.log(
+//         count +
+//           " bottle of beer on the wall, " +
+//           count +
+//           " bottle of beer. Take one down and pass it around, no more bottles of beer on the wall."
+//       );
+//     } else {
+//       console.log(
+//         "No more bottles of beer on the wall, no more bottles of beer. Go to the store and buy some more, 99 bottles of beer on the wall."
+//       );
+//     }
+
+//     count--;
+//   }
+// }
+
+
