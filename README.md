@@ -2,4 +2,6 @@
 
 Tracking my progress on "The Complete Full-Stack Web Development Bootcamp" By Angela Yu on Udemy
 
-14 - 10 -2025: Started learning React basics uptil Import, Export & Modules
+14 - 10 -2025: Currently coding on codesandbox and not locally so projects will be forked for now, started learning React basics, got intoduced to JSX and Babel, inline syling, and Components.
+
+15 - 10 - 2025: Learnt more about Importing and Exporting Modules, React Props, Debugging with React DevTools, Mapping Data to Components, ES6 methods (Map, Filter, Reduce, Find, FindIndex)
