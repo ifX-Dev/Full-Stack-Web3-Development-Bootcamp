@@ -11,3 +11,5 @@ Tracking my progress on "The Complete Full-Stack Web Development Bootcamp" By An
 17 - 10 - 2025: Learnt more React focusing on Conditional rendering with Ternaty and AND Operator, States (Declarative and Imperative programming), React Hooks (useState), Object and Array Destructuring, Event Handling and React Forms.
 
 18 - 10 - 2025: Learnt more on React, Class and Function components, ES6 Spread Operator and manipulatiing Complex States
+
+24 - 10 - 2025: Working on the design and logic for my Capstone Project 2 (A Blog Web App Using Node.Js with Express and EJS Package)
