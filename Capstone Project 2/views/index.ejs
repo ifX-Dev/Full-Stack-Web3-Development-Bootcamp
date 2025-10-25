@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Blogger</title>
+  </head>
+  <body>
+    <header>
+      <h1>My Blogger</h1>
+    </header>
+    <main>
+      <section>
+        <form action="/submit" method="POST">
+          <input
+            type="text"
+            id="title"
+            name="title"
+            placeholder="Enter your post's title"
+            required
+          />
+          <textarea
+            name="content"
+            id="content"
+            placeholder="Enter your post's content"
+            required
+          ></textarea>
+          <input type="submit" value="Submit Post" name="action" />
+        </form>
+      </section>
+
+      <section>
+        <% if (updatedPost && updatedPost.length > 0) { %> <% for( let i = 0; i
+        < updatedPost.length; i++ ) { %>
+        <div>
+          <div>
+            <h2><%= updatedPost[i].postTitle %></h2>
+            <p><%= updatedPost[i].postContent %></p>
+          </div>
+          <div>
+            <form action="/delete" method="POST">
+              <button type="submit" value="<%= i %>" name="id">Delete</button>
+            </form>
+            <form action="/edit" method="post">
+              <button type="submit" value="<%= i %>" name="id">Edit</button>
+            </form>
+          </div>
+        </div>
+        <% } %> <% } %>
+      </section>
+    </main>
+  </body>
+</html>

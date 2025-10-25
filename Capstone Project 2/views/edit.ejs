@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Blogger</title>
+  </head>
+  <body>
+    <main>
+      <h2>Edit Post</h2>
+      <form action="/submitedit" method="post">
+        <input
+          type="text"
+          name="editedTitle"
+          id="editedTitle"
+          value="<%= editTitle %>"
+        />
+        <textarea name="editedContent" id="editedContent">
+<%= editContent %></textarea
+        >
+        <input type="submit" value="Submit edit" />
+      </form>
+    </main>
+  </body>
+</html>
