@@ -1,0 +1,192 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #286f9c;
+  width: 100%;
+  height: 80px;
+  padding: 20px 64px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 195px;
+}
+
+img {
+  width: 40px;
+  height: 40px;
+}
+
+h1 {
+  font-family: "Albert Sans", sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+}
+.create_page {
+  flex: 1;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 425px);
+  gap: 24px;
+  padding: 32px 64px;
+}
+
+.edit_page {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 32px;
+}
+
+h2 {
+  font-family: "Average Sans";
+  color: #286f9c;
+  font-size: 32px;
+  font-weight: normal;
+}
+
+.form,
+.post {
+  height: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+}
+
+.form img {
+  width: 32px;
+  height: 32px;
+}
+
+.edit_form {
+  width: 425px;
+}
+
+.form div {
+  display: flex;
+  width: 170px;
+  align-items: center;
+  justify-content: space-between;
+  height: fit-content;
+}
+
+.innerform {
+  border-width: 5px;
+  border-color: rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  height: 368px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(0, 0, 0, 0.25);
+}
+
+.title,
+.content {
+  font-family: "Average Sans";
+  font-size: 16px;
+  border-radius: 8px;
+  padding-left: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.title {
+  height: 40px;
+}
+
+.content {
+  height: 228px;
+  padding-top: 16px;
+}
+
+.create_btn,
+.submit_edit_btn {
+  height: 48px;
+  background-color: #286f9c;
+  font-family: "Albert Sans", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  border-radius: 8px;
+  text-align: center;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.post p {
+  width: 100%;
+  height: 288px;
+  font-family: "Average Sans";
+}
+
+.post_text {
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.view_post_buttons {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+.delete_btn,
+.edit_btn {
+  height: 48px;
+  width: 168px;
+  color: white;
+  font-family: "Albert Sans";
+  border-radius: 8px;
+  font-size: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  font-weight: bold;
+}
+
+.delete_btn {
+  background-color: red;
+}
+
+.edit_btn {
+  background-color: #286f9c;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+footer p {
+  font-family: "Albert Sans", sans-serif;
+  font-size: 20px;
+  font-weight: lighter;
+}

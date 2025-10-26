@@ -1,25 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Blogger</title>
-  </head>
-  <body>
-    <main>
+<%- include('partials/header') %>
+<main class="edit_page">
+  <section class="form edit_form">
+    <div>
+      <img src="/image/icon.png" alt="" />
       <h2>Edit Post</h2>
-      <form action="/submitedit" method="post">
-        <input
-          type="text"
-          name="editedTitle"
-          id="editedTitle"
-          value="<%= editTitle %>"
-        />
-        <textarea name="editedContent" id="editedContent">
+    </div>
+    <form action="/submitedit" method="post" class="innerform">
+      <input
+        type="text"
+        name="editedTitle"
+        id="editedTitle"
+        class="title"
+        value="<%= editTitle %>"
+      />
+      <textarea name="editedContent" id="editedContent" class="content">
 <%= editContent %></textarea
-        >
-        <input type="submit" value="Submit edit" />
-      </form>
-    </main>
-  </body>
-</html>
+      >
+      <input type="submit" value="Submit edit" class="submit_edit_btn" />
+    </form>
+  </section>
+</main>
+
+<%- include('partials/footer') %>

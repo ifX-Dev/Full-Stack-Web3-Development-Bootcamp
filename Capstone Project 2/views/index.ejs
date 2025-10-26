@@ -1,53 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Blogger</title>
-  </head>
-  <body>
-    <header>
-      <h1>My Blogger</h1>
-    </header>
-    <main>
-      <section>
-        <form action="/submit" method="POST">
-          <input
-            type="text"
-            id="title"
-            name="title"
-            placeholder="Enter your post's title"
-            required
-          />
-          <textarea
-            name="content"
-            id="content"
-            placeholder="Enter your post's content"
-            required
-          ></textarea>
-          <input type="submit" value="Submit Post" name="action" />
-        </form>
-      </section>
+<%- include('partials/header') %>
+<main class="create_page">
+  <section class="form">
+    <div>
+      <img src="/image/plus-circle.png" alt="" />
+      <h2>New Post</h2>
+    </div>
+    <form action="/submit" method="POST" class="innerform">
+      <input
+        type="text"
+        id="title"
+        class="title"
+        name="title"
+        placeholder="Enter title here..."
+        required
+      />
+      <textarea
+        name="content"
+        id="content"
+        class="content"
+        placeholder="Enter content here (max 280 char.)..."
+        required
+      ></textarea>
+      <input type="submit" value="Post" name="action" id="button" class="create_btn" />
+    </form>
+  </section>
 
-      <section>
-        <% if (updatedPost && updatedPost.length > 0) { %> <% for( let i = 0; i
-        < updatedPost.length; i++ ) { %>
-        <div>
-          <div>
-            <h2><%= updatedPost[i].postTitle %></h2>
-            <p><%= updatedPost[i].postContent %></p>
-          </div>
-          <div>
-            <form action="/delete" method="POST">
-              <button type="submit" value="<%= i %>" name="id">Delete</button>
-            </form>
-            <form action="/edit" method="post">
-              <button type="submit" value="<%= i %>" name="id">Edit</button>
-            </form>
-          </div>
-        </div>
-        <% } %> <% } %>
-      </section>
-    </main>
-  </body>
-</html>
+  <% if (updatedPost && updatedPost.length > 0) { %> <% for( let i = 0; i <
+  updatedPost.length; i++ ) { %>
+  <section class="post">
+    <div class="post_text">
+      <h2><%= updatedPost[i].postTitle %></h2>
+      <p><%= updatedPost[i].postContent %></p>
+    </div>
+    <div class="view_post_buttons">
+      <form action="/delete" method="POST">
+        <button type="submit" value="<%= i %>" name="id" class="delete_btn">
+          Delete
+        </button>
+      </form>
+      <form action="/edit" method="post">
+        <button type="submit" value="<%= i %>" name="id" class="edit_btn">
+          Edit
+        </button>
+      </form>
+    </div>
+  </section>
+  <% } %> <% } %>
+</main>
+<%- include('partials/footer') %>

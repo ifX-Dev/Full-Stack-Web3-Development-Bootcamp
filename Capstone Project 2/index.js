@@ -62,10 +62,6 @@ app.post("/submitedit", (req, res) => {
   res.render("index.ejs", {
     updatedPost: post,
   });
-  
-  console.log(editedTitle);
-  console.log(editedContent);
-  console.log(id);
 });
 
 app.listen(port, () => {
