@@ -3,11 +3,84 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>MyWeather</title>
   </head>
   <body>
-    <form action="/submit" method="post">
-      <button type="submit">Get Weather</button>
-    </form>
+    <header>
+      <form action="/search" method="POST">
+        <input
+          type="text"
+          name="country"
+          placeholder="Enter country..."
+          required
+        />
+        <input
+          type="text"
+          name="state"
+          placeholder="Enter city/state..."
+          required
+        />
+        <button>Search</button>
+      </form>
+    </header>
+    <main>
+      <% if (locals.temperature) { %>
+      <section class="current_weather_info">
+        <div class="main_current_weather_info">
+          <p>Tuesday, <span>16:00</span></p>
+          <img src="/image/sun-and-cloud.svg" alt="" />
+          <h1><%= temperature %><span>&deg;C </span></h1>
+          <div>
+            <p>H: <span><%= temperatureHigh %>&deg;C</span></p>
+            <p>L: <span><%= temperatureLow %>&deg;C</span></p>
+          </div>
+        </div>
+        <div class="secondary_current_weather_info">
+          <div>
+            <img src="/image/umbrella.svg" alt="" />
+            <div>
+              <p><span>Relative Humidity</span></p>
+              <h3><%= relativeHumidity %><span>%</span></h3>
+            </div>
+          </div>
+          <div>
+            <img src="/image/drops.svg" alt="" />
+            <div>
+              <p><span>Precipitation</span></p>
+              <h3><%= precipitation %><span>mm</span></h3>
+            </div>
+          </div>
+        </div>
+        <div class="secondary_current_weather_info">
+          <div>
+            <img src="/image/mild.svg" alt="" />
+            <div>
+              <p><span>Surface Presure</span></p>
+              <h3><%= surfacePressure %><span>hPa</span></h3>
+            </div>
+          </div>
+          <div>
+            <img src="/image/windy.svg" alt="" />
+            <div>
+              <p><span>Wind Speed</span></p>
+              <h3><%= windSpeed %><span>km/h</span></h3>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section></section>
+      <% } %> <%if (locals.error){ %>
+      <h2 class="error_message">
+        Invalid entry, check your spelling and try again
+      </h2>
+      <% } %>
+    </main>
   </body>
 </html>

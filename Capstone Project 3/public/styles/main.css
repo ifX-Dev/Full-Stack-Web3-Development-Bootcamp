@@ -1,0 +1,137 @@
+/* 1rem = 16px */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Albert Sans";
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f6f8;
+}
+
+header {
+  width: 100%;
+  padding: 4% 4.4%;
+}
+
+form {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+input {
+  width: 37.5%;
+  height: 56px;
+  border-radius: 40px;
+  border: 2px solid black;
+  background-image: url("/image/search-refraction.svg");
+  background-repeat: no-repeat;
+  background-position: 16px center;
+  font-size: 18px;
+  padding-left: 5%;
+}
+
+button {
+  height: 56px;
+  width: 17.5%;
+  border-radius: 40px;
+  background-color: black;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4.4%;
+}
+
+p {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+p span {
+  color: #808080;
+}
+
+h1 {
+  font-size: 150px;
+  position: relative;
+}
+
+h1 span {
+  font-size: 80px;
+  position: absolute;
+  top: 20px;
+}
+
+h2 {
+  font-size: 130px;
+}
+
+h3 {
+  font-size: 80px;
+}
+
+h3 span {
+  font-size: 32px;
+  color: #808080;
+}
+
+.current_weather_info {
+  width: 100%;
+  height: 482px;
+  background-color: white;
+  border-radius: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 60px;
+  padding: 0 32px;
+}
+
+.main_current_weather_info {
+  padding: 30px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main_current_weather_info div {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.secondary_current_weather_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.secondary_current_weather_info > div {
+  display: flex;
+  align-items: center;
+  border-radius: 40px;
+  border: 2px solid #808080;
+  height: 35%;
+}
+
+.secondary_current_weather_info img {
+  margin: 0 40px;
+}
