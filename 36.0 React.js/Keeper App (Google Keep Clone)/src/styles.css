@@ -13,16 +13,52 @@ body {
 }
 
 header {
-  background-color: #f5ba13;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin: auto -16px;
   padding: 16px 32px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  background-color: #f5ba13;
+  color: white;
 }
 
 header h1 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
   color: #fff;
   font-family: "McLaren", cursive;
   font-weight: 200;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-info img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.logout-btn {
+  background-color: white;
+  color: #f5ba13;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+
+.logout-btn:hover {
+  background-color: #fff3cd;
 }
 
 footer {
@@ -78,7 +114,9 @@ form.create-note {
   box-shadow: 0 1px 5px rgb(138, 137, 137);
 }
 form.create-note input,
-form.create-note textarea {
+form.create-note textarea,
+.note input,
+.note textarea {
   width: 100%;
   border: none;
   padding: 4px;
@@ -100,4 +138,14 @@ form.create-note button {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   outline: none;
+}
+
+.login-page {
+  text-align: center;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }

@@ -32,7 +32,7 @@ function CreateArea(props) {
   const [isClicked, setIsClicked] = React.useState(false);
 
   function handleClick() {
-    setIsClicked(!isClicked);
+    setIsClicked(true);
   }
 
   return (

@@ -6,6 +6,24 @@ import nodeGeocoder from "node-geocoder";
 const app = express();
 const port = 3000;
 
+const now = new Date();
+
+const days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+const dayName = days[now.getDay()];
+
+const hours = now.getHours().toString().padStart(2, "0");
+const minutes = now.getMinutes().toString().padStart(2, "0");
+
+const formatted = `${hours}:${minutes}`;
+
 const options = {
   provider: "openstreetmap",
 };
@@ -42,6 +60,8 @@ app.post("/search", async (req, res) => {
       windSpeed: weather.data.daily.wind_speed_10m_max[0],
       relativeHumidity: weather.data.hourly.relative_humidity_2m[0],
       surfacePressure: weather.data.hourly.surface_pressure[0],
+      day: dayName,
+      time: formatted,
     });
   } catch (error) {
     console.error("Failed to make request:", error.message);
