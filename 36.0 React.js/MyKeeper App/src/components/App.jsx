@@ -7,7 +7,7 @@ import Auth from "./Auth";
 
 function App() {
   const [notes, setNotes] = useState([]);
-  const [user, setUser] = useState(null); // store logged-in user
+  const [user, setUser] = useState(null);
 
   function addNote(newNote) {
     setNotes((prevNotes) => [...prevNotes, newNote]);
@@ -24,16 +24,14 @@ function App() {
   }
 
   function handleLogin(credentialResponse) {
-    // decode the credential to get user info (e.g., name, email)
     const token = credentialResponse.credential;
 
-    // decode JWT token to get user info
     const base64Url = token.split(".")[1];
     const base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
     const decodedData = JSON.parse(atob(base64));
 
     console.log("Decoded user:", decodedData);
-    setUser(decodedData); // store user info
+    setUser(decodedData);
   }
 
   function handleLogout() {
