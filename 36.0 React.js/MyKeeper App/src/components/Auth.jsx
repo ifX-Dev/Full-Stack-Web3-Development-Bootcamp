@@ -1,7 +1,10 @@
-import React from "react";
+import { useContext } from "react";
 import { GoogleLogin } from "@react-oauth/google";
+import { AppContext } from "../contexts/AppContext";
 
-function Auth({ onLogin }) {
+function Auth() {
+  const { handleLogin } = useContext(AppContext);
+
   return (
     <div className="login-page">
       <h2>Welcome to the MyKeeper App</h2>
@@ -9,7 +12,7 @@ function Auth({ onLogin }) {
       <GoogleLogin
         onSuccess={(credentialResponse) => {
           console.log(credentialResponse);
-          onLogin(credentialResponse);
+          handleLogin(credentialResponse);
         }}
         onError={() => console.log("Login Failed")}
       />

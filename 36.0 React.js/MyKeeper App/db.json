@@ -1,0 +1,19 @@
+{
+  "notes": [
+    {
+      "title": "Grocery List",
+      "content": "Milk, eggs, bread, fruits, and cereal.",
+      "id": "89a9"
+    },
+    {
+      "title": "Meeting Notes",
+      "content": "Discuss project timeline, assign tasks, and review milestones.",
+      "id": "6938"
+    },
+    {
+      "title": "Personal Reminder",
+      "content": "Call Mom, pay electricity bill, and schedule dentist appointment.",
+      "id": "4f2c"
+    }
+  ]
+}

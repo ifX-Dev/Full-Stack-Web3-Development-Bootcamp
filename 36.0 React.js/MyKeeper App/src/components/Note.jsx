@@ -1,17 +1,21 @@
-import React, { useState } from "react";
+import { useState, useContext } from "react";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 import DoneIcon from "@mui/icons-material/Done";
+import { AppContext } from "../contexts/AppContext";
 
-function Note(props) {
+function Note({ id }) {
+  const { notes, deleteNote, updateNote } = useContext(AppContext);
+  const note = notes.find((n) => n.id === id);
+
   const [isEditing, setIsEditing] = useState(false);
   const [updatedNote, setUpdatedNote] = useState({
-    title: props.title,
-    content: props.content
+    title: note?.title || "",
+    content: note?.content || ""
   });
 
   function handleDelete() {
-    props.onDelete(props.id);
+    deleteNote(id);
   }
 
   function handleEdit() {
@@ -24,9 +28,11 @@ function Note(props) {
   }
 
   function handleUpdate() {
-    props.onUpdate(props.id, updatedNote);
+    updateNote(id, updatedNote);
     setIsEditing(false);
   }
+
+  if (!note) return null;
 
   return (
     <div className="note">
@@ -48,8 +54,8 @@ function Note(props) {
         </>
       ) : (
         <>
-          <h1>{props.title}</h1>
-          <p>{props.content}</p>
+          <h1>{note.title}</h1>
+          <p>{note.content}</p>
           <button onClick={handleEdit}>
             <EditIcon />
           </button>

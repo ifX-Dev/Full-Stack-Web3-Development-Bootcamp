@@ -72,6 +72,15 @@ footer {
 footer p {
   color: #ccc;
 }
+
+.notes-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
 .note {
   background: #fff;
   border-radius: 7px;
@@ -80,6 +89,8 @@ footer p {
   width: 240px;
   margin: 16px;
   float: left;
+  flex-shrink: 1;
+  flex-grow: 0;
 }
 .note h1 {
   font-size: 1.1em;

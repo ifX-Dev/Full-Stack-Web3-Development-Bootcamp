@@ -1,7 +1,10 @@
-import React from "react";
+import { useContext } from "react";
 import HighlightIcon from "@mui/icons-material/Highlight";
+import { AppContext } from "../contexts/AppContext";
 
-function Header({ user, onLogout }) {
+function Header() {
+  const { user, handleLogout } = useContext(AppContext);
+
   return (
     <header>
       <h1>
@@ -13,7 +16,7 @@ function Header({ user, onLogout }) {
         <div className="user-info">
           {user.picture && <img src={user.picture} alt={user.name} />}
           <span>{user.name}</span>
-          <button onClick={onLogout} className="logout-btn">
+          <button onClick={handleLogout} className="logout-btn">
             Logout
           </button>
         </div>

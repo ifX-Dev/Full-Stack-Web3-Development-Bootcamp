@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import AddIcon from "@mui/icons-material/Add";
 import Fab from "@mui/material/Fab";
 import Zoom from "@mui/material/Zoom";
+import { AppContext } from "../contexts/AppContext";
 
-function CreateArea(props) {
+function CreateArea() {
+  const { addNote } = useContext(AppContext);
+
   const [note, setNote] = useState({
     title: "",
     content: "",
@@ -21,7 +24,7 @@ function CreateArea(props) {
   }
 
   function submitNote(event) {
-    props.onAdd(note);
+    addNote(note);
     setNote({
       title: "",
       content: "",
